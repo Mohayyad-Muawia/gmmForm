@@ -67,10 +67,8 @@ export default function MainForm({ onNext }) {
       <div className="max-w-3xl mx-auto">
         {/* الرأسية */}
         <div className="text-center mb-6 sm:mb-10">
-          <div className="inline-flex items-center justify-center w-16 h-16 sm:w-20 sm:h-20 bg-gradient-to-br from-slate-800 to-slate-900 rounded-2xl mb-4 shadow-lg">
-            <svg className="w-8 h-8 sm:w-10 sm:h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-            </svg>
+          <div className="inline-flex items-center justify-center   sm:w-20 sm:h-20 bg-gradient-to-br from-slate-800 to-slate-900 rounded-2xl mb-4 shadow-lg">
+             <img className="rounded-xl" src="../../public/lo.jpg" alt="" />
           </div>
           <h1 className="text-2xl sm:text-3xl font-bold text-slate-900 mb-2">
             استمارة التقديم على الوظائف

@@ -3,11 +3,17 @@ import MainForm from "./components/MainForm";
 import JobQuestions from "./components/JobQuestions";
 import SuccessPage from "./components/end";
 
-export default function App() {
-  // حالة الخطوات (1 = بيانات أساسية، 2 = أسئلة الوظيفة)
-  const [step, setStep] = useState(1);
+// 👇 استيراد supabase
+import { createClient } from "@supabase/supabase-js";
 
-  // بيانات المستخدم الأساسية
+// 👇 إنشاء عميل Supabase
+const supabase = createClient(
+ "https://pdyzylmlacucxfjmzjsa.supabase.co",
+  "sb_publishable_4ZZYh7TrJjUQXkMfGJoAcw_o4s8gyqc"
+);
+
+export default function App() {
+  const [step, setStep] = useState(1);
   const [mainData, setMainData] = useState(null);
 
   // الانتقال من الخطوة الأولى للثانية
@@ -22,45 +28,55 @@ export default function App() {
     setStep(1);
   };
 
-  // إرسال الطلب النهائي
-  const handleSubmit = (finalData) => {
-    console.log("🚀 البيانات النهائية للإرسال:", finalData);
-    
-    // هنا يمكنك إرسال البيانات إلى الباك إند
-    // مثال:
-    // fetch("/api/apply", {
-    //   method: "POST",
-    //   headers: { "Content-Type": "application/json" },
-    //   body: JSON.stringify(finalData)
-    // })
-    // .then(response => response.json())
-    // .then(data => {
-    //   alert("✅ تم تقديم الطلب بنجاح!");
-    //   // إعادة تعيين النموذج
-    //   setStep(1);
-    //   setMainData(null);
-    // })
-    // .catch(error => {
-    //   console.error("❌ خطأ في الإرسال:", error);
-    //   alert("حدث خطأ أثناء إرسال الطلب. الرجاء المحاولة مرة أخرى.");
-    // });
+  // ⬅️ دالة إرسال البيانات حسب الـ department
+  const sendToSupabase = async (department, data) => {
+    console.log("📤 إرسال البيانات لجدول:", department);
+    const { error } = await supabase.from(department).insert([data]);
 
-    // للاختبار فقط:
+    if (error) {
+      console.error("❌ خطأ أثناء الإرسال:", error);
+      alert("⚠️ حدث خطأ أثناء إرسال الطلب!");
+      return false;
+    }
+
+    return true;
+  };
+
+  // إرسال الطلب النهائي
+  const handleSubmit = async (finalData) => {
+    console.log("🚀 البيانات النهائية للإرسال:", finalData);
+
+    const department = mainData.department; // 👈 جدول الإرسال المختار من المستخدم
+
+    if (!department) {
+      alert("⚠️ لا يوجد قسم محدد!");
+      return;
+    }
+
+    // دمج بيانات الخطوتين
+    const fullData = {
+      ...mainData,
+      ...finalData,
+      created_at: new Date(),
+    };
+
+    const success = await sendToSupabase(department, fullData);
+
+    if (!success) return;
+
     alert("✅ تم تقديم الطلب بنجاح!");
     
-    // إعادة تعيين النموذج بعد الإرسال
-   setStep(3); // خطوة جديدة للنجاح
-  setMainData(finalData);
+    setMainData(fullData);
+    setStep(3);
   };
 
   return (
     <div className="min-h-screen bg-gray-50">
-      {/* الخطوة الأولى: النموذج الأساسي */}
+
       {step === 1 && (
         <MainForm onNext={handleNext} />
       )}
 
-      {/* الخطوة الثانية: أسئلة الوظيفة */}
       {step === 2 && mainData && (
         <JobQuestions
           job={mainData.job}
@@ -71,14 +87,15 @@ export default function App() {
       )}
 
       {step === 3 && (
-  <SuccessPage
-    applicationData={mainData}
-    onBackToHome={() => {
-      setStep(1);
-      setMainData(null);
-    }}
-  />
-)}
+        <SuccessPage
+          applicationData={mainData}
+          onBackToHome={() => {
+            setStep(1);
+            setMainData(null);
+          }}
+        />
+      )}
+
     </div>
   );
 }

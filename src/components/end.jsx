@@ -37,12 +37,12 @@ export default function SuccessPage({ onBackToHome, applicationData }) {
               
               <div className="space-y-3 text-sm">
                 <div className="flex justify-between items-center border-b border-gray-200 pb-2">
-                  <span className="font-medium text-gray-800">{applicationData.name}</span>
+                  <span className="font-medium text-gray-800">{applicationData.Name}</span>
                   <span className="text-gray-500">الاسم:</span>
                 </div>
                 
                 <div className="flex justify-between items-center border-b border-gray-200 pb-2">
-                  <span className="font-medium text-gray-800">{applicationData.email}</span>
+                  <span className="font-medium text-gray-800">{applicationData.Gmail}</span>
                   <span className="text-gray-500">البريد الإلكتروني:</span>
                 </div>
                 

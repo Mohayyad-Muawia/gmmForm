@@ -153,6 +153,32 @@ export default function JobQuestions({ job, mainData, onBack, onSubmit }) {
           </div>
         )}
 
+         {q.type === "checkbox" && (
+          <div className="space-y-2 mr-11">
+            {q.Options.map((opt) => (
+              <label
+                key={opt}
+                className="flex items-center gap-3 cursor-pointer hover:bg-slate-50 p-3 rounded-lg border border-transparent hover:border-slate-200 transition-all"
+              >
+                <input
+                  type="checkbox"
+                  value={opt}
+                  checked={answers[q.id]?.includes(opt) || false}
+                  onChange={(e) => {
+                    const currentValues = answers[q.id] || [];
+                    const newValues = e.target.checked
+                      ? [...currentValues, opt]
+                      : currentValues.filter(v => v !== opt);
+                    handleChange(q.id, newValues);
+                  }}
+                  className="w-5 h-5 text-slate-800 focus:ring-2 focus:ring-slate-800 rounded"
+                />
+                <span className="text-slate-700">{opt}</span>
+              </label>
+            ))}
+          </div>
+        )}
+
         {q.type === "file" && (
           <div className="mr-11">
             <div className="relative">

@@ -818,7 +818,7 @@
     ]
   },
 
-      "مسؤول / نائب مسؤول قسم المشاريع"   ////////// one uncomplete
+      "مسؤول / نائب مسؤول قسم المشاريع"   ////////// ok
   : {
     title: 'مسؤول / نائب مسؤول قسم المشاريع',
     department: "قسم المشاريع",
@@ -913,7 +913,7 @@
          required: true
       },
       {
-        id: 14,
+        id: "p",
         label: "التعامل مع الخطط التشغيلية وإعدادها وتحديثها",
         type: "radio",
         Options: ["لدي خبرة في ذلك وقمت بذلك من قبل", "ليس لدي خبرة ولم أتعامل مع ذلك", "أخرى"],
@@ -922,34 +922,34 @@
     ]
   },
 
-      "عضو قسم المشاريع"
+      "عضو قسم المشاريع"   ////////////// ok
   : {
     title:'عضو قسم المشاريع',
     department: "قسم المشاريع",
     questions: [
       {
-        id: 1,
+        id: "diffe_meth",
         label: "كيف تتعامل مع تأخير أو صعوبة في إتمام مهمة محددة ضمن المشروع؟",
         type: "textarea",
                  required: true
 
       },
       {
-        id: 2,
+        id: "idea_meth",
         label: "كيف تقدم الاقتراحات لتطوير أداء المشروع أو الفريق بطريقة فعّالة؟",
         type: "textarea",
                  required: true
 
       },
       {
-        id: 3,
+        id: "challenge_meth",
         label: "صِف موقفًا واجهت فيه تحديًا أثناء العمل ضمن الفريق، وكيف تعاملت معه للحفاظ على سير المشروع",
         type: "textarea",
                  required: true
 
       },
       {
-        id: 4,
+        id: 'co_dev',
         label: "اقترح طريقة لتعزيز التعاون بين أعضاء الفريق وضمان تنفيذ المهام بدقة وفي الوقت المحدد",
         type: "textarea",
                  required: true
@@ -1117,7 +1117,7 @@
   //////////////////////  new add ///////////
 
   
-  "نائب مسؤول قسم النوادي"  ///////// ok n
+  "نائب مسؤول قسم النوادي"  ///////// ok 
   : {
     title: "نائب مسؤول قسم النوادي",
     questions: [
@@ -1182,16 +1182,16 @@
         type: 'textarea',
         required: true
       },
-      // {
-      //   id: 12,
-      //   label: 'إضافة أو تعليق',
-      //   type: 'text',
-      //   required: false
-      // }
+      {
+        id: "a",
+        label: 'إضافة أو تعليق',
+        type: 'text',
+        required: false
+      }
     ]
   },
 
-  "مسؤول الصفحات الإعلامية"    ///////////// 5 uncomplete
+  "مسؤول الصفحات الإعلامية"    ///////////// 4 uncomplete
   : {
     title: "مسؤول الصفحات الإعلامية",
     questions: [
@@ -1278,7 +1278,7 @@
         required: true
       },
       {
-        id: 14,
+        id: "b",
         label: 'إضافة أو تعليق',
         type: 'text',
         required: false
@@ -1286,7 +1286,7 @@
     ]
   },
 
-  "النادي الإنجليزي - منسق فعاليات"  /////////////// ok n
+  "النادي الإنجليزي - منسق فعاليات"  /////////////// ok 
   : {
     title: "النادي الإنجليزي - منسق فعاليات",
     questions: [
@@ -1341,7 +1341,7 @@
         required: true
       },
       {
-        id: 10,
+        id: "c",
         label: 'إضافة أو تعليق',
         type: 'text',
         required: false
@@ -1349,7 +1349,7 @@
     ]
   },
 
-  "النادي الفكري والثقافة"  /////////// ok n
+  "النادي الفكري والثقافة"  /////////// ok 
   : {
     title: "النادي الفكري والثقافة - مسؤول العضوية والمتابعة",
     questions: [
@@ -1409,7 +1409,7 @@
         required: true
       },
       {
-        id: 9,
+        id: 'd',
         label: 'إضافة أو تعليق',
         type: 'text',
         required: false
@@ -1417,7 +1417,7 @@
     ]
   },
 
-  "مسؤول قسم القراءة"   ////////////// ok n
+  "مسؤول قسم القراءة"   ////////////// ok 
   : {
     title: "مسؤول قسم القراءة",
     questions: [
@@ -1489,7 +1489,7 @@
         required: true
       },
       {
-        id: 13,
+        id: "f",
         label: 'إضافة أو تعليق',
         type: 'text',
         required: false
@@ -1497,7 +1497,7 @@
     ]
   },
 
-  "مسؤول القسم الأدبي"   //////////////// ok n
+  "مسؤول القسم الأدبي"   //////////////// ok 
   : {
     title: "مسؤول القسم الأدبي",
     questions: [
@@ -1581,7 +1581,7 @@
         required: true
       },
       {
-        id: 14,
+        id: "f",
         label: 'إضافة أو تعليق',
         type: 'text',
         required: false
@@ -1589,7 +1589,7 @@
     ]
   },
 
-  "النادي الديني - نائب مسؤول القسم الشرعي"   ///////// ok n
+  "النادي الديني - نائب مسؤول القسم الشرعي"   ///////// ok 
   : {
     title: "النادي الديني - نائب مسؤول القسم الشرعي",
     questions: [
@@ -1656,7 +1656,7 @@
         required: true
       },
       {
-        id: 12,
+        id: "g",
         label: 'إضافة أو تعليق',
         type: 'text',
         required: false
@@ -1664,7 +1664,7 @@
     ]
   },
 
-  "مشرف القسم الشرعي"       ////////////// ok n
+  "مشرف القسم الشرعي"       ////////////// ok 
   : {
     title: "مشرف القسم الشرعي",
     questions: [
@@ -1725,7 +1725,7 @@
         required: true
       },
       {
-        id: 10,
+        id: "h",
         label: 'إضافة أو تعليق',
         type: 'text',
         required: false
@@ -1734,7 +1734,7 @@
   },
 
 
-  "نائب قسم المحتوى التوجيهي"    ////////////// ok n 
+  "نائب قسم المحتوى التوجيهي"    ////////////// ok 
   : {
     title: "نائب قسم المحتوى التوجيهي",
     questions: [
@@ -1782,7 +1782,7 @@
         required: true
       },
       {
-        id: 8,
+        id: "i",
         label: 'إضافة أو تعليق',
         type: 'text',
         required: false
@@ -1790,7 +1790,7 @@
     ]
   },
 
-  "مسؤول ضبط الجودة"     ///////////////// ok n
+  "مسؤول ضبط الجودة"     ///////////////// ok 
   : {
         title: "مسؤول ضبط الجودة",
         questions: [
@@ -1869,7 +1869,7 @@
         required: true
         },
         {
-        id: 14,
+        id: "j",
         label: 'إضافة أو تعليق',
         type: 'text',
         required: false
@@ -1877,7 +1877,7 @@
         ]
   },
 
-  "مشرف تحديات المسار العلمي/الأدبي"   ///////////// ok n
+  "مشرف تحديات المسار العلمي/الأدبي"   ///////////// ok 
   : {
         title: "مشرف تحديات المسار العلمي/الأدبي",
         questions: [
@@ -1932,7 +1932,7 @@
         required: true
         },
         {
-        id: 9,
+        id: "k",
         label: 'إضافة أو تعليق',
         type: 'text',
         required: false
@@ -1943,7 +1943,7 @@
   
   //////////////////////////     3   ///////////////
     
-     'عضو النشر'   ////////////// need upded
+     'عضو النشر'   ////////////// ok
      : {
     title: "عضو قسم النشر",
     questions: [
@@ -1960,40 +1960,40 @@
         required: true
       },
       {
-        id: "publishing_handle_negative",
+        id: "publishing_platforms",
         label: 'المنصات التي لديك خبرة في إدارتها أو التعامل معها',
         type: 'checkbox',
         Options: ['فيسبوك', 'انستغرام', 'تويتر (X)', 'تيك توك', 'لينكد إن', 'أخرى'],
         required: true
       },
+      // {
+      //   id: "publishing_content_quality_steps", ////
+      //   label: 'ما مستوى خبرتك في إدارة أو النشر على وسائل التواصل الاجتماعي؟',
+      //   type: 'radio',
+      //   Options: ['مبتدئ', 'متوسط', 'متقدم'],
+      //   required: true
+      // },
       {
-        id: "publishing_content_quality_steps",
-        label: 'ما مستوى خبرتك في إدارة أو النشر على وسائل التواصل الاجتماعي؟',
-        type: 'radio',
-        Options: ['مبتدئ', 'متوسط', 'متقدم'],
-        required: true
-      },
-      {
-        id: "publishing_commit_interaction",
+        id: "publishing_handle_negative",
         label: 'كيف تتعامل عادةً مع التعليقات أو الرسائل السلبية على المنصات؟',
         type: 'textarea',
         required: true
       },
       {
-        id: "publishing_account_management_experience",
+        id: "publishing_content_quality_steps",
         label: 'ما الخطوات التي تتبعها لضمان نشر المحتوى بشكل جيد وجذاب؟',
         type: 'textarea',
         required: true
       },
       {
-        id: "publishing_platforms",
+        id: "publishing_commit_interaction",
         label: 'هل يمكنك الالتزام بالتفاعل المستمر مع المتابعين خلال اليوم؟',
         type: 'radio',
         Options: ['نعم', 'لا'],
         required: true
       },
       {
-        id: "publishing_platforms_facebook",
+        id: "publishing_account_management_experience",
         label: 'هل سبق أن أدرت حساباً أو نشرت محتوى على صفحة عامة؟ صف التجربة.',
         type: 'textarea',
         required: true
@@ -2222,86 +2222,86 @@
     ]
   },
 
-      "مسؤول قسم الإيرادات"
+      "مسؤول قسم الإيرادات"    ////////////ok
       : {
     title: "مسؤول قسم الإيرادات",
     questions: [
       {
-        id: 1,
+        id: 'revmgr_academic_major',
         label: 'ما هو تخصصك الأكاديمي؟',
         type: 'radio',
         Options: ['محاسبة', 'إدارة مالية', 'اقتصاد', 'أخرى (يرجى التحديد)'],
         required: true
       },
       {
-        id: 2,
+        id: 'revmgr_experience_rating',
         label: 'كيف تقيم خبرتك العملية في إدارة الإيرادات:',
         type: 'radio',
         Options: ['1 - ضعيف', '2 - متوسط', '3 - جيد', '4 - ممتاز'],
         required: true
       },
       {
-        id: 3,
+        id: 'revmgr_receipts_review_steps',
         label: 'ما الخطوات التي تتبعها لمراجعة واعتماد الإيصالات المالية؟',
         type: 'textarea',
         required: true
       },
       {
-        id: 4,
+        id: 'revmgr_revenue_deposit_weekly_review',
         label: 'كيف يمكنك التأكد من توريد جميع الإيرادات للحساب الرسمي للمنصة؟',
         type: 'radio',
         Options: ['بواسطة مراجعة أسبوعية', 'إعداد تقارير شهرية', 'التواصل مع الفرق المعنية', 'أخرى (يرجى التحديد)'],
         required: true
       },
       {
-        id: 5,
+        id: 'revmgr_coordination_with_reg_rating',
         label: 'كيف تقيم مهاراتك في التنسيق مع قسم التسجيل لضمان ربط الإيرادات بالطلاب والمستفيدين؟',
         type: 'radio',
         Options: ['1 - ضعيف', '2 - متوسط', '3 - جيد', '4 - ممتاز'],
         required: true
       },
       {
-        id: 6,
+        id: "revmgr_report_focus_volume",
         label: 'ما هي العناصر الأساسية التي تركز عليها عند إعداد تقارير الإيرادات؟',
         type: 'radio',
         Options: ['حجم الإيرادات', 'توزيع الإيرادات', 'التوصيات للمستقبل', 'جميع ما سبق'],
         required: true
       },
       {
-        id: 7,
+        id: 'revmgr_financial_analysis_rating',
         label: 'كيف تقيم مهاراتك في التحليل المالي:',
         type: 'radio',
         Options: ['1 - ضعيف', '2 - متوسط', '3 - جيد', '4 - ممتاز'],
         required: true
       },
       {
-        id: 8,
+        id: 'revmgr_use_digital_tools',
         label: 'هل لديك خبرة في استخدام الأدوات الرقمية للتعامل مع المستندات المالية؟',
         type: 'radio',
         Options: ['نعم', 'لا'],
         required: true
       },
       {
-        id: 8.1,
+        id: 'revmgr_digital_tools_list',
         label: 'إذا كانت الإجابة نعم، يرجى ذكر الأدوات المستخدمة',
         type: 'text',
         required: false,
         dependsOn: { questionId: 8, value: 'نعم' }
       },
       {
-        id: 9,
+        id: 'revmgr_integrity_transparency_text',
         label: 'كيف تؤكد على أهمية النزاهة والشفافية في تعاملاتك المالية؟',
         type: 'textarea',
         required: true
       },
       {
-        id: 10,
+        id: 'revmgr_recommendations_short',
         label: 'ما هي أهم التوصيات التي تعتقد أنه يجب رفعها إلى الإدارة المالية لتحسين عمليات إدارة الإيرادات؟',
         type: 'text',
         required: true
       },
       {
-        id: 11,
+        id: 'revmgr_additional_comments',
         label: 'إضافة أو تعليق',
         type: 'text',
         required: false
@@ -2309,78 +2309,78 @@
     ]
   },
 
-      "نائب مسؤول قسم الإيرادات"
+      "نائب مسؤول قسم الإيرادات"  ///////// ok
   : {
     title: "نائب مسؤول قسم الإيرادات",
     questions: [
       {
-        id: 1,
+        id: 'revdep_tracking_capacity_rating',
         label: 'كيف تقيم قدرتك على متابعة عمليات استلام الإيرادات وتوثيقها بشكل دوري؟',
         type: 'radio',
         Options: ['1 - ضعيف', '2 - متوسط', '3 - جيد', '4 - ممتاز'],
         required: true
       },
       {
-        id: 2,
+        id: 'revdep_supervision_strategies',
         label: 'ما هي الاستراتيجيات التي تتبعها للإشراف على الفرق الفرعية (إيرادات مشاريع - منح - تبرعات - توثيق) قسم الإيرادات؟',
         type: 'textarea',
         required: true
       },
       {
-        id: 3,
+        id: "revdep_recording_system_electronic",
         label: 'ما هي الطرق التي تستخدمها لتنظيم وحفظ الإيصالات والسجلات المالية؟',
         type: 'radio',
         Options: ['نظام إلكتروني (مثل Excel أو ERP)', 'الأرشفة الورقية', 'كليهما', 'أخرى (يرجى التحديد)'],
         required: true
       },
       {
-        id: 4,
+        id: 'revdep_ensure_earchive_updates',
         label: 'ما هي الإجراءات التي تتبعها لضمان تحديث الأرشيف الإلكتروني بانتظام؟',
         type: 'textarea',
         required: true
       },
       {
-        id: 5,
+        id: "revdep_reporting_collect_from_teams",
         label: 'كيف تقوم بإعداد التقارير المرحلية والملخصات الدورية؟',
         type: 'radio',
         Options: ['جمع البيانات من الفرق', 'استخدام نماذج جاهزة', 'تحليل البيانات بشكل دوري', 'أخرى (يرجى التحديد)'],
         required: true
       },
       {
-        id: 6,
+        id: "revdep_memo_focus_all",
         label: 'ما هي النقاط الأساسية التي تركز عليها عند كتابة محاضر الاجتماعات؟',
         type: 'radio',
         Options: ['الوقت والتاريخ', 'القرارات المتخذة', 'التوصيات والملاحظات', 'جميع ما سبق'],
         required: true
       },
       {
-        id: 7,
+        id: "revdep_identify_financial_challenges",
         label: 'كيف تساهم في رصد التحديات المالية واقتراح الحلول المناسبة؟',
         type: 'textarea',
         required: true
       },
       {
-        id: 8,
+        id: "revdep_absence_task_distribution",
         label: 'في حالة غياب المسؤول، كيف تضمن استمرارية عمل اللجنة دون انقطاع؟',
         type: 'radio',
         Options: ['توزيع المهام على الفرق', 'التواصل مع الإدارات الأخرى', 'متابعة الأعمال اليومية', 'أخرى (يرجى التحديد)'],
         required: true
       },
       {
-        id: 8.1,
+        id: "revdep_transparency_accuracy_text",
         label: 'كيف تؤكد على أهمية الشفافية والدقة في جميع الإجراءات المالية؟',
         type: 'textarea',
         required: true
       },
       {
-        id: 9,
+        id: "revdep_multitask_collab_rating",
         label: 'كيف تقيم قدرتك على العمل مع فرق متعددة ومهام متوازية؟',
         type: 'radio',
         Options: ['1 - ضعيف', '2 - متوسط', '3 - جيد', '4 - ممتاز'],
         required: true
       },
       {
-        id: 10,
+        id: "revdep_additional_comments",
         label: 'إضافة أو تعليق',
         type: 'text',
         required: false
@@ -2388,86 +2388,86 @@
     ]
   },
 
-      "نائب مسؤول التسجيل"
+      "نائب مسؤول التسجيل"  ////////// ok
   : {
     title: "نائب مسؤول التسجيل",
     questions: [
       {
-        id: 1,
+        id: "regdep_registration_experience_rating",
         label: 'ما مدى خبرتك في تنظيم عمليات التسجيل بشكل عام؟',
         type: 'radio',
         Options: ['1 - ضعيف', '2 - متوسط', '3 - جيد', '4 - ممتاز'],
         required: true
       },
       {
-        id: 2,
+        id: "regdep_issue_raise_to_manager",
         label: 'إذا واجهتك مشكلة في عمل فريق الاستفسارات، كيف تتعامل معها؟',
         type: 'radio',
         Options: ['أرفع المشكلة إلى المسؤول', 'أتحدث مع الفريق لمحاولة حلها', 'أبحث عن حلول خارجية', 'أخرى (يرجى التحديد)'],
         required: true
       },
       {
-        id: 3,
+        id: "regdep_data_review_manual",
         label: 'ما هي الطريقة التي تتبعها لمراجعة البيانات المدخلة للتأكد من دقتها؟',
         type: 'radio',
         Options: ['مراجعة يدوية', 'استخدام برامج خاصة', 'التعاون مع زملاء الفريق', 'لم أشارك في ذلك سابقاً'],
         required: true
       },
       {
-        id: 4,
+        id: "regdep_escalation_followup_rating",
         label: 'كيف تقيم قدرتك على متابعة المشكلات ورفعها للمسؤول؟',
         type: 'radio',
         Options: ['1 - ضعيف', '2 - متوسط', '3 - جيد', '4 - ممتاز'],
         required: true
       },
       {
-        id: 5,
+        id: "regdep_weekly_report_elements",
         label: 'ما هي العناصر الأساسية التي تفضل تضمينها في التقارير الأسبوعية؟',
         type: 'text',
         required: true
       },
       {
-        id: 6,
+        id: "regdep_coord_pref_meetings",
         label: 'في حال كنت بحاجة للتنسيق مع قسم الإيرادات، ما هي الطريقة التي تفضلها؟',
         type: 'radio',
         Options: ['الاجتماعات الدورية', 'البريد الإلكتروني', 'الاتصال المباشر', 'أخرى (يرجى التحديد)'],
         required: true
       },
       {
-        id: 7,
+        id: "regdep_backup_cloud",
         label: 'ما هي إستراتيجيتك لحفظ النسخ الاحتياطية من البيانات بشكل دوري؟',
         type: 'radio',
         Options: ['التخزين السحابي', 'التخزين المحلي', 'إعداد نسخ احتياطية تلقائية', 'أخرى (يرجى التحديد)'],
         required: true
       },
       {
-        id: 8,
+        id: "regdep_handle_multitask_under_pressure",
         label: 'كيف تتعامل مع المهام المتعددة في مواقف الضغط العالي؟',
         type: 'text',
         required: true
       },
       {
-        id: 9,
+        id: "regdep_accuracy_rating",
         label: 'كيف تصف دقتك في العمل؟',
         type: 'radio',
         Options: ['1 - ضعيف', '2 - متوسط', '3 - جيد', '4 - ممتاز'],
         required: true
       },
       {
-        id: 10,
+        id: "regdep_teamwork_enhancement",
         label: 'كيف تعزز روح العمل الجماعي داخل فريق التسجيل؟',
         type: 'text',
         required: true
       },
       {
-        id: 11,
+        id: "regdep_backup_pref_cloud_services",
         label: 'ما هي الطريقة المفضلة لديك لحفظ النسخ الاحتياطية من البيانات؟',
         type: 'radio',
         Options: ['التخزين السحابي (Google Drive، Dropbox)', 'التخزين المحلي', 'كلاهما', 'أخرى (يرجى التحديد)'],
         required: true
       },
       {
-        id: 12,
+        id: "regdep_additional_comments",
         label: 'إضافة أو تعليق',
         type: 'text',
         required: false
@@ -2475,80 +2475,80 @@
     ]
   },
 
-      "عضو الاستفسارات"
+      "عضو الاستفسارات"     ///////// ok 
   : {
     title: "عضو الاستفسارات",
     questions: [
       {
-        id: 1,
+        id: "inq_member_response_rating",
         label: 'كيف تقيم قدرتك على الرد على استفسارات الطلاب بشكل فعال؟',
         type: 'radio',
         Options: ['1 - ضعيف', '2 - متوسط', '3 - جيد', '4 - ممتاز'],
         required: true
       },
       {
-        id: 2,
+        id: "inq_member_ask_more_details",
         label: 'إذا كان هناك استفسار غير واضح من طالب، كيف تتعامل معه؟',
         type: 'radio',
         Options: ['أطلب مزيد من التفاصيل', 'أقدم ما أعتقد أنه صحيح', 'أحيل الطالب إلى مسؤول آخر', 'أخرى (يرجى التحديد)'],
         required: true
       },
       {
-        id: 3,
+        id: "inq_member_try_solve",
         label: 'كيف تتعامل مع مشكلة يواجهها أحد المستفيدين؟',
         type: 'radio',
         Options: ['أحاول حلها بنفسي', 'أبلغ المسؤول', 'أعطي المستفيد اقتراحات', 'أخرى (يرجى التحديد)'],
         required: true
       },
       {
-        id: 4,
+        id: "inq_member_customer_service_experience",
         label: 'ما هو مدى خبرتك السابقة في خدمة العملاء أو التعامل مع المستفيدين؟',
         type: 'radio',
         Options: ['1 - ضعيف', '2 - متوسط', '3 - جيد', '4 - ممتاز'],
         required: true
       },
       {
-        id: 5,
+        id: "inq_member_communication_rating",
         label: 'كيف تقيم مهاراتك في التواصل مع مختلف الشخصيات؟',
         type: 'radio',
         Options: ['1 - ضعيف', '2 - متوسط', '3 - جيد', '4 - ممتاز'],
         required: true
       },
       {
-        id: 6,
+        id: "inq_member_ensure_user_satisfaction",
         label: 'كيف يمكنك ضمان رضا المستفيدين عن تجربة التسجيل؟',
         type: 'textarea',
         required: true
       },
       {
-        id: 6.1,
+        id: "inq_member_refer_to_manager_immediately",
         label: 'في حال كانت المشكلة تتطلب خبرة أعلى، هل ستقوم بإحالتها للمسؤول؟',
         type: 'radio',
         Options: ['نعم، على الفور', 'لا، سأحاول حلها بنفسي أولاً', 'أحياناً حسب تقديري'],
         required: true
       },
       {
-        id: 7,
+        id: "inq_member_prioritize_responses",
         label: 'كيف تتعامل مع الاستفسارات الكثيرة في وقت قصير؟',
         type: 'radio',
         Options: ['أضع أولوية للرد', 'أعمل بجد أكبر', 'أطلب المساعدة من الزملاء', 'أخرى (يرجى التحديد)'],
         required: true
       },
       {
-        id: 8,
+        id: "inq_member_handle_difficult_situations_rating",
         label: 'كيف تصف قدرتك على التعامل مع مواقف صعبة؟',
         type: 'radio',
         Options: ['1 - ضعيف', '2 - متوسط', '3 - جيد', '4 - ممتاز'],
         required: true
       },
       {
-        id: 9,
+        id: "inq_member_improvement_idea",
         label: 'إذا كان بإمكانك تحسين تجربة الاستفسارات، فما هي الفكرة التي ستطرحها؟',
         type: 'text',
         required: true
       },
       {
-        id: 10,
+        id: "inq_member_additional_comments",
         label: 'إضافة أو تعليق',
         type: 'text',
         required: false
@@ -2556,79 +2556,79 @@
     ]
   },
 
-      "نائب مسؤول قسم المشاريع"
+      "نائب مسؤول قسم المشاريع"   /////////// ok 
   : {
     title: "نائب مسؤول قسم المشاريع",
     questions: [
       {
-        id: 1,
+        id: "projdep_committee_followup_rating",
         label: 'كيف تقيم قدرتك على متابعة سير عمل اللجان التابعة للمشاريع بشكل دوري؟',
         type: 'radio',
         Options: ['1 - ضعيف', '2 - متوسط', '3 - جيد', '4 - ممتاز'],
         required: true
       },
       {
-        id: 2,
+        id: "projdep_handle_team_delay",
         label: 'إذا لاحظت أن إحدى الفرق تتأخر عن الخطة الزمنية، ما هو الإجراء الذي ستقوم به؟',
         type: 'textarea',
         required: true
       },
       {
-        id: 3,
+        id: "projdep_tool_word",
         label: 'ما هي الأدوات التي تفضل استخدامها لتوثيق مراحل تنفيذ المشاريع؟',
         type: 'checkbox',
         Options: ['Microsoft Word', 'Google Drive / Sheets', 'برامج إدارة المشاريع (مثل Trello أو Asana)', 'أخرى (يرجى التحديد)'],
         required: true
       },
       {
-        id: 4,
+        id: "projdep_report_frequency_weekly",
         label: 'كم مرة تقوم بإعداد تقارير دورية عن سير المشاريع؟',
         type: 'radio',
         Options: ['أسبوعياً', 'شهرياً', 'عند الحاجة', 'أخرى (يرجى التحديد)'],
         required: true
       },
       {
-        id: 5,
+        id: "projdep_ensure_report_accuracy_personal_review",
         label: 'كيف تضمن دقة التقارير المقدمة لك من اللجان؟',
         type: 'radio',
         Options: ['مراجعتها بدقة شخصياً', 'طلب التعديلات اللازمة من الفرق', 'التواصل مع الأعضاء المعنيين', 'أخرى (يرجى التحديد)'],
         required: true
       },
       {
-        id: 6,
+        id: "projdep_meeting_minutes_key_elements",
         label: 'ما هي العناصر الأساسية التي تضعها في اعتبارك عند كتابة محاضر الاجتماعات؟',
         type: 'text',
         required: true
       },
       {
-        id: 7,
+        id: "projdep_challenges_identify_weak_points",
         label: 'كيف تتعامل مع التحديات التي قد تواجه المشاريع؟',
         type: 'radio',
         Options: ['بحث النقاط الضعيفة مع الفرق', 'تقديم اقتراحات للحلول', 'رفع الموضوع للمسؤول', 'جميع ما سبق'],
         required: true
       },
       {
-        id: 8,
+        id: "projdep_help_team_if_struggling",
         label: 'إذا كان أحد الفرق يواجه صعوبة في تنفيذ عمله، كيف يمكنك مساعدتهم؟',
         type: 'text',
         required: true
       },
       {
-        id: 9,
+        id: "projdep_multitask_rating",
         label: 'كيف تقيم قدرتك على التعامل مع مهام متعددة في وقت واحد؟',
         type: 'radio',
         Options: ['1 - ضعيف', '2 - متوسط', '3 - جيد', '4 - ممتاز'],
         required: true
       },
       {
-        id: 10,
+        id: "projdep_team_spirit_activities",
         label: 'كيف تعزز روح الفريق والالتزام بالعمل التطوعي بين أعضاء الفريق؟',
         type: 'radio',
         Options: ['تنظيم أنشطة مشتركة', 'تقديم الدعم والتوجيه', 'الاحتفاء بالإنجازات والمساهمات', 'جميع ما سبق'],
         required: true
       },
       {
-        id: 11,
+        id: "projdep_additional_comments",
         label: 'إضافة أو تعليق',
         type: 'text',
         required: false

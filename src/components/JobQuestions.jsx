@@ -9,7 +9,7 @@ export default function JobQuestions({ job, mainData, onBack, onSubmit }) {
   // الأسئلة الثابتة
   const fixedQuestions = [
     {
-      id: "motivation",
+      id: "motivation_and_qualifications",
       label: "ما دافعك لاختيار هذا المنصب؟ وكيف ترى نفسك فيه؟ وما مؤهلاتك للعمل عليه؟",
       type: "textarea",
       required: true,
@@ -17,7 +17,7 @@ export default function JobQuestions({ job, mainData, onBack, onSubmit }) {
       position: "start"
     },
     {
-      id: "cv_upload",
+      id: "cv_url",
       label: "الرجاء إرفاق السيرة الذاتية الخاصة بك",
       type: "file",
       required: true,

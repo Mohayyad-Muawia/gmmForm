@@ -16,12 +16,55 @@ export default function App() {
   const [step, setStep] = useState(1);
   const [mainData, setMainData] = useState(null);
 
-  // الانتقال من الخطوة الأولى للثانية
-  const handleNext = (data) => {
-    console.log("📋 البيانات المستلمة من النموذج:", data);
-    setMainData(data);
-    setStep(2);
-  };
+  // إرسال بيانات الخطوة الأولى فقط لجدول الأسئلة العامة
+const sendMainToGeneralTable = async (data) => {
+  const tableName = "الأسئلة العامة - المقدمة لكل ادارة";
+
+  const { error } = await supabase.from(tableName).insert([data]);
+
+  if (error) {
+    console.error("❌ خطأ أثناء إرسال البيانات العامة:", error);
+    alert("⚠️ فشل إرسال البيانات العامة!");
+    return false;
+  }
+
+  return true;
+};
+
+
+  const uploadFile = async (file) => {
+  const fileName = `${Date.now()}_${file.name}`;
+
+  const { data, error } = await supabase.storage
+    .from("cv_folder") // 👈 اسم الفولدر في Storage
+    .upload(fileName, file);
+
+  if (error) {
+    console.error("❌ فشل رفع الملف:", error);
+    return null;
+  }
+
+  // الحصول على رابط التحميل
+  const { data: publicUrlData } = supabase.storage
+    .from("cv_folder")
+    .getPublicUrl(fileName);
+
+  return publicUrlData.publicUrl; // 👈 أرجع الرابط
+};
+
+
+  const handleNext = async (data) => {
+  console.log("📋 بيانات Main:", data);
+
+  // حفظ البيانات في state
+  setMainData(data);
+
+  // إرسال البيانات لجدول الأسئلة العامة
+  const success = await sendMainToGeneralTable(data);
+  if (!success) return;
+
+  setStep(2);
+};
 
   // الرجوع للخطوة الأولى
   const handleBack = () => {
@@ -46,12 +89,19 @@ export default function App() {
   const handleSubmit = async (finalData) => {
     console.log("🚀 البيانات النهائية للإرسال:", finalData);
 
-    const department = mainData.department; // 👈 جدول الإرسال المختار من المستخدم
+    const department = mainData.department; //  جدول الإرسال المختار من المستخدم
 
     if (!department) {
       alert("⚠️ لا يوجد قسم محدد!");
       return;
     }
+
+     let cvUrl = null;
+
+  if (finalData.jobAnswer?.cv_url instanceof File) {
+    cvUrl = await uploadFile(finalData.jobAnswer.cv_url);
+    finalData.jobAnswer.cv_url = cvUrl; // عدّل القيمة من ملف إلى رابط
+  }
 
     // دمج بيانات الخطوتين
     const fullData = {
@@ -60,7 +110,7 @@ export default function App() {
       created_at: new Date(),
     };
 
-    const success = await sendToSupabase(department, fullData);
+    const success = await sendToSupabase(department, finalData.jobAnswers);
 
     if (!success) return;
 

@@ -5,8 +5,8 @@ export default function MainForm({ onNext }) {
     Name: "",
     Gmail: "",
     Age: "",
-    Gander: "",
-    Academic_level: "",
+    Gender: "",
+    academic_level: "",
     major: "",
     whatsapp_num: "",
     Telegram_num: "",
@@ -24,7 +24,7 @@ export default function MainForm({ onNext }) {
     culture_initiative_experience: "",
     culture_full_responsibility_concept: "",
     culture_team_high_performance: "",
-    agculture_self_developmentree6: "",
+    culture_self_development: "",
     experience_volunteering: "",
     experience_position_details: "",
     skill_project_management: "",
@@ -205,8 +205,8 @@ export default function MainForm({ onNext }) {
                     الجنس <span className="text-red-500">*</span>
                   </label>
                   <select
-                    value={formData.Gander}
-                    onChange={(e) => handleChange("Gander", e.target.value)}
+                    value={formData.Gender}
+                    onChange={(e) => handleChange("Gender", e.target.value)}
                     required
                     className="w-full px-4 py-3 border border-slate-300 rounded-lg bg-white focus:border-slate-800 focus:ring-2 focus:ring-slate-200 outline-none transition-all"
                   >
@@ -231,8 +231,8 @@ export default function MainForm({ onNext }) {
                     المستوى الدراسي <span className="text-red-500">*</span>
                   </label>
                   <select
-                    value={formData.Academic_level}
-                    onChange={(e) => handleChange("Academic_level", e.target.value)}
+                    value={formData.academic_level}
+                    onChange={(e) => handleChange("academic_level", e.target.value)}
                     required
                     className="w-full px-4 py-3 border border-slate-300 rounded-lg bg-white focus:border-slate-800 focus:ring-2 focus:ring-slate-200 outline-none transition-all"
                   >
